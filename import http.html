@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Proposal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #fff;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease-in-out;
+        }
+        h1 {
+            color: #f0f8ff;
+        }
+        .image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .image-box {
+            width: 150px;
+            height: 150px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 10px;
+            position: relative;
+        }
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .image-text {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            color: #333;
+            font-size: 0.9em;
+        }
+        .text-box {
+            font-size: 1.2em;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 20px;
+        }
+        .button {
+            background-color: #4682B4;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .button-container {
+            margin-top: 30px;
+        }
+        .section {
+            display: none;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .active {
+            display: block;
+        }
+        .button.no {
+            background-color: #FF6347; /* Red button for "No" option */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Our Story Section -->
+    <div id="our-story" class="section active" style="background-image: url('https://example.com/your_image1.jpg');">
+        <h1>Our Story</h1>
+        <div class="image-container">
+            <div class="image-box">
+                <img src="https://example.com/picture1.jpg" alt="Picture 1">
+                <div class="image-text">Text for picture 1</div>
+            </div>
+            <div class="image-box">
+                <img src="https://example.com/picture2.jpg" alt="Picture 2">
+                <div class="image-text">Text for picture 2</div>
+            </div>
+            <div class="image-box">
+                <img src="https://example.com/picture3.jpg" alt="Picture 3">
+                <div class="image-text">Text for picture 3</div>
+            </div>
+            <div class="image-box">
+                <img src="https://example.com/picture4.jpg" alt="Picture 4">
+                <div class="image-text">Text for picture 4</div>
+            </div>
+            <div class="image-box">
+                <img src="https://example.com/picture5.jpg" alt="Picture 5">
+                <div class="image-text">Text for picture 5</div>
+            </div>
+        </div>
+        <div class="button-container">
+            <a href="#" class="button" onclick="showSection('why-love')">Continue Our Journey</a>
+        </div>
+    </div>
+
+    <!-- Why I Love You Section -->
+    <div id="why-love" class="section" style="background-image: url('https://example.com/your_image2.jpg');">
+        <h1>Why I Love You</h1>
+        <div class="text-box">
+            <p>1. You make me laugh.</p>
+            <p>2. You are my best friend.</p>
+            <p>3. Your kindness inspires me.</p>
+            <p>4. I love your sense of adventure.</p>
+            <p>5. You always support me.</p>
+        </div>
+        <div class="button-container">
+            <a href="#" class="button" onclick="showSection('proposal')">Forever and Always</a>
+        </div>
+    </div>
+
+    <!-- The Proposal Section -->
+    <div id="proposal" class="section" style="background-image: url('https://example.com/your_image3.jpg');">
+        <h1>Will You Marry Me?</h1>
+        <p>You mean the world to me, and I want to spend my life with you...</p>
+        <div class="button-container">
+            <a href="#" class="button" onclick="showSection('future')">Yes</a>
+            <a href="#" onclick="alert('Are you sure? Think again!')" class="button no">No</a>
+        </div>
+    </div>
+
+    <!-- Our Future Section -->
+    <div id="future" class="section" style="background-image: url('https://example.com/your_image4.jpg');">
+        <h1>Our Future Together</h1>
+        <p>Here's to our dreams and all the adventures ahead...</p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
